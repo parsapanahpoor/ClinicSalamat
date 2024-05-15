@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="DomainServices\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
 </Project>
