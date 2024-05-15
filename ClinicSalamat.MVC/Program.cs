@@ -3,6 +3,11 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using ClinicSalamat.Application;
 using Microsoft.EntityFrameworkCore;
 using ClinicSalamat.Core;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using System;
+using Microsoft.Extensions.Hosting;
 
 namespace ClinicSalamat.MVC;
 
