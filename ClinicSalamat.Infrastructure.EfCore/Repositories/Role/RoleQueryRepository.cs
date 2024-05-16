@@ -1,9 +1,12 @@
-﻿using ClinicSalamat.Domain.IRepositories.Role;
+﻿using ClinicSalamat.Application.Contract.DTOs.AdminSide.Role;
+using ClinicSalamat.Application.Contract.DTOs.Common;
+using ClinicSalamat.Application.Contract.IApplicationServices.Role;
+using ClinicSalamat.Domain.IRepositories.Role;
 using Microsoft.EntityFrameworkCore;
 
 namespace ClinicSalamat.Infrastructure.EfCore.Repositories.Role;
 
-public class RoleQueryRepository : QueryGenericRepository<Domain.Entities.RoleAgg.Role>, IRoleQueryRepository
+public class RoleQueryRepository : QueryGenericRepository<Domain.Entities.RoleAgg.Role>, IRoleQueryRepository, IRoleApplicationService
 {
     #region Ctor
 
@@ -12,6 +15,60 @@ public class RoleQueryRepository : QueryGenericRepository<Domain.Entities.RoleAg
     public RoleQueryRepository(ClinicSalamatDbContext context) : base(context)
     {
         _context = context;
+    }
+
+    #endregion
+
+    #region General
+
+    public async Task<bool> IsUser_Admin(ulong userId,
+                                         CancellationToken cancellationToken)
+    {
+        //Check That is user super admin 
+        var isUserSuperAdmin = await IsUserIsSuperAdmin(userId, cancellationToken);
+        if (isUserSuperAdmin) return true;
+
+        //Get User Roles
+        var userRolesName = await GetListOf_UserUniqueRolesName(userId, cancellationToken);
+        if (userRolesName != null && userRolesName.Any() && userRolesName.Contains("Admin")) return true;
+
+        return false;
+    }
+
+    private async Task<bool> IsUserIsSuperAdmin(ulong userId,
+                                             CancellationToken cancellationToken)
+    {
+        return await _context.Users
+                             .AsNoTracking()
+                             .Where(p => !p.IsDelete &&
+                                    p.Id == userId)
+                             .Select(p => p.IsAdmin)
+                             .FirstOrDefaultAsync();
+    }
+
+    private async Task<List<string?>> GetListOf_UserUniqueRolesName(ulong userId,
+                                                                   CancellationToken cancellationToken)
+    {
+        //Get User Selected Role Ids
+        var roleIds = await _context.UserRoles
+                                    .AsNoTracking()
+                                    .Where(p => !p.IsDelete && p.Id == userId)
+                                    .Select(p => p.RoleId)
+                                    .ToListAsync();
+
+        List<string?> roleNames = new List<string?>();
+
+        foreach (var roleId in roleIds)
+        {
+            roleNames.Add(await _context.Roles
+                                        .AsNoTracking()
+                                        .Where(p => !p.IsDelete &&
+                                               p.Id == roleId)
+                                        .Select(p => p.RoleUniqueName)
+                                        .FirstOrDefaultAsync());
+        }
+
+        return roleNames;
     }
 
     #endregion
@@ -40,7 +97,7 @@ public class RoleQueryRepository : QueryGenericRepository<Domain.Entities.RoleAg
         // get user roles
         var userRoles = await _context.UserRoles
                                       .AsNoTracking()
-                                      .Where(s => s.UserId == userId && 
+                                      .Where(s => s.UserId == userId &&
                                              !s.IsDelete)
                                        .ToListAsync();
 
@@ -91,6 +148,45 @@ public class RoleQueryRepository : QueryGenericRepository<Domain.Entities.RoleAg
                              .Where(p => !p.IsDelete &&
                                     p.RoleId == roleId)
                              .Select(p => p.PermissionId)
+                             .ToListAsync();
+    }
+
+    public async Task<FilterRolesDTO> Filter_Roles(FilterRolesDTO filter, CancellationToken cancellation)
+    {
+        var query = _context.Roles
+                           .AsNoTracking()
+                           .Where(p => !p.IsDelete)
+                           .OrderByDescending(p => p.CreateDate)
+                           .AsQueryable();
+
+        #region filter
+
+        if ((!string.IsNullOrEmpty(filter.RoleTitle)))
+        {
+            query = query.Where(u => u.Title.Contains(filter.RoleTitle));
+        }
+
+        #endregion
+
+        #region paging
+
+        await filter.Paging(query);
+
+        #endregion
+
+        return filter;
+    }
+
+    public async Task<List<SelectListViewModel>> GetSelectRolesList(CancellationToken cancellation)
+    {
+        return await _context.Roles
+                             .AsNoTracking()
+                             .Where(s => !s.IsDelete)
+                             .Select(s => new SelectListViewModel
+                             {
+                                 Id = s.Id,
+                                 Title = s.Title
+                             })
                              .ToListAsync();
     }
 

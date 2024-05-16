@@ -1,4 +1,5 @@
-﻿using ClinicSalamat.Domain.Entities.RoleAgg;
+﻿using ClinicSalamat.Application.Contract.DTOs.Common;
+using ClinicSalamat.Domain.Entities.RoleAgg;
 using ClinicSalamat.Domain.IRepositories.Role;
 using Microsoft.EntityFrameworkCore;
 

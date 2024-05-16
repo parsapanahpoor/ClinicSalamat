@@ -2,6 +2,13 @@
 
 public interface IRoleQueryRepository
 {
+    #region General Methods
+
+    Task<bool> IsUser_Admin(ulong userId,
+                            CancellationToken cancellationToken);
+
+    #endregion
+
     #region Site Side 
 
     Task<bool> HasUserPermission(ulong userId, string permissionName);

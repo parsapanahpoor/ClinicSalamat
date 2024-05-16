@@ -1,0 +1,128 @@
+﻿@model ClinicSalamat.Application.Contract.DTOs.SiteSide.Account.RegisterUserDTO
+
+@{
+    ViewData["Title"] = "ثبت نام";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بیمارستان شفا ساری</title>
+
+    <!-- Bootstrap -->
+    <link href="~/content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- tobii css -->
+    <link href="~/content/css/tobii.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons -->
+    <link href="~/content/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <!-- Slider -->
+    <link rel="stylesheet" href="~/content/css/tiny-slider.css" />
+    <!-- Main Css -->
+    <link href="~/content/css/style.min.css" rel="stylesheet" type="text/css" id="theme-opt" />
+    <link href="~/content/css/colors/default.css" rel="stylesheet" id="color-opt">
+</head>
+
+
+<body>
+
+    <section class="bg-home bg-circle-gradiant d-flex align-items-center">
+        <div class="bg-overlay bg-overlay-white"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-8">
+                    <div class="card shadow rounded border-0 mt-4">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">ثبت نام </h4>
+                            <form asp-action="Register" class="login-form mt-4" asp-area="" asp-controller="Account" method="post">
+
+                                <div class="row">
+
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">موبایل <span class="text-danger">*</span></label>
+                                            <div class="form-icon position-relative">
+                                                <i data-feather="book" class="fea icon-sm icons"></i>
+                                                <input type="text" asp-for="Mobile" class="form-control ps-5" placeholder="موبایل" />
+                                                <span style="color:red;" asp-validation-for="Mobile"></span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">کلمه عبور<span class="text-danger">*</span></label>
+                                            <div class="form-icon position-relative">
+                                                <i data-feather="key" class="fea icon-sm icons"></i>
+                                                <input type="password" asp-for="Password" class="form-control ps-5" placeholder="کلمه عبور" />
+                                                <span style="color:red;" asp-validation-for="Password"></span>
+                                                @* <input type="password" class="form-control ps-5" placeholder="کلمه عبور " required=""> *@
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">تکرار کلمه عبور <span class="text-danger">*</span></label>
+                                            <div class="form-icon position-relative">
+                                                <i data-feather="key" class="fea icon-sm icons"></i>
+                                                <input type="password" asp-for="RePassword" class="form-control" placeholder="       تکرار کلمه عبور" />
+                                                <span style="color:red;" asp-validation-for="RePassword"></span>
+                                                @* <input type="password" class="form-control ps-5" placeholder="کلمه عبور " required=""> *@
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">تایید میکنم <a href="#" class="text-primary">قوانین سامانه را پذیرفته ام.</a></label>
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+
+                                    <div class="col-md-12">
+                                        <div class="d-grid">
+                                            <button class="btn btn-primary">ثبت نام </button>
+                                        </div>
+                                    </div><!--end col-->
+
+
+                                    <div class="mx-auto">
+                                        <p class="mb-0 mt-3"><small class="text-dark me-2">اگر حساب کاربری دارید،</small> <a href="/Login" class="text-dark fw-bold">وارد شوید </a></p>
+                                    </div>
+                                </div><!--end row-->
+                            </form>
+                        </div>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div> <!--end container-->
+    </section>
+
+
+
+    <!-- javascript -->
+    <script src="~/content/js/bootstrap.bundle.min.js"></script>
+    <!-- SLIDER -->
+    <script src="~/content/js/tiny-slider.js"></script>
+    <!-- tobii js -->
+    <script src="~/content/js/tobii.min.js"></script>
+    <!-- Icons -->
+    <script src="~/content/js/feather.min.js"></script>
+    <!-- Switcher -->
+    <script src="~/content/js/switcher.js"></script>
+    <!-- Main Js -->
+    <script src="~/content/js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+    <script src="~/content/js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+
+
+</body>
+<!--Body Ends-->
+</html>

@@ -1,9 +1,11 @@
-﻿using ClinicSalamat.Domain.IRepositories.User;
+﻿using ClinicSalamat.Application.Contract.DTOs.AdminSide.User;
+using ClinicSalamat.Application.Contract.IApplicationServices.User;
+using ClinicSalamat.Domain.IRepositories.User;
 using ClinicSalamat.Infrastructure.EfCore.ApplicationDbContext;
 using Microsoft.EntityFrameworkCore;
 namespace ClinicSalamat.Infrastructure.EfCore.Repositories.User;
 
-public class UserQueryRepository : QueryGenericRepository<Domain.Entities.UsersAgg.User>, IUserQueryRepository
+public class UserQueryRepository : QueryGenericRepository<Domain.Entities.UsersAgg.User>, IUserQueryRepository , IUserApplicationService
 {
     #region Ctor
 
@@ -64,6 +66,37 @@ public class UserQueryRepository : QueryGenericRepository<Domain.Entities.UsersA
         if (user.Id == userId) return true;
 
         return false;
+    }
+
+    public async Task<FilterUsersDTO> Filter_Users(FilterUsersDTO filter, 
+                                                   CancellationToken cancellation)
+    {
+        var query = _context.Users
+                           .AsNoTracking()
+                           .OrderByDescending(p => p.CreateDate)
+                           .AsQueryable();
+
+        #region filter
+
+        if ((!string.IsNullOrEmpty(filter.Mobile)))
+        {
+            query = query.Where(u => u.Mobile.Contains(filter.Mobile));
+        }
+
+        if ((!string.IsNullOrEmpty(filter.Username)))
+        {
+            query = query.Where(u => u.Username.Contains(filter.Username));
+        }
+
+        #endregion
+
+        #region paging
+
+        await filter.Paging(query);
+
+        #endregion
+
+        return filter;
     }
 
     #endregion

@@ -1,4 +1,6 @@
-﻿namespace ClinicSalamat.Domain.IRepositories.User;
+﻿using ClinicSalamat.Domain.Entities.UsersAgg;
+
+namespace ClinicSalamat.Domain.IRepositories.User;
 
 public interface IUserQueryRepository
 {

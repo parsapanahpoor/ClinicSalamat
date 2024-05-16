@@ -1,6 +1,8 @@
 ﻿#region Usings
 
 using ClinicSalamat.Application.Common.IUnitOfWork;
+using ClinicSalamat.Application.Contract.IApplicationServices.Role;
+using ClinicSalamat.Application.Contract.IApplicationServices.User;
 using ClinicSalamat.Domain.IRepositories.Role;
 using ClinicSalamat.Domain.IRepositories.User;
 using ClinicSalamat.Infrastructure.EfCore.Repositories.Role;
@@ -21,10 +23,12 @@ public static class DependencyContainer
         //User
         services.AddScoped<IUserCommandRepository, UserCommandRepository>();
         services.AddScoped<IUserQueryRepository, UserQueryRepository>();
+        services.AddScoped<IUserApplicationService, UserQueryRepository>();
 
         //Role
         services.AddScoped<IRoleCommandRepository, RoleCommandRepository>();
         services.AddScoped<IRoleQueryRepository, RoleQueryRepository>();
+        services.AddScoped<IRoleApplicationService, RoleQueryRepository>();
 
         #endregion
 

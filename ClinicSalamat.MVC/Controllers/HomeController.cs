@@ -1,13 +1,13 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
-namespace ClinicSalamat.MVC.Controllers
+namespace ClinicSalamat.MVC.Controllers;
+
+public class HomeController : Controller
 {
-    public class HomeController : Controller
-    {
-        public IActionResult Index()
-        {
-            return View();
-        }
-    }
+    #region Index
+ 
+    public IActionResult Index() => View();
+
+    #endregion
 }
