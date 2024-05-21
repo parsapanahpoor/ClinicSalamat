@@ -36,15 +36,14 @@ public record RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, 
 
         #region Add User 
 
-        Domain.Entities.UsersAgg.User user = new Domain.Entities.UsersAgg.User()
-        {
-            Username = request.Mobile.Trim().ToLower().SanitizeText(),
-            Mobile = request.Mobile.Trim().ToLower().SanitizeText(),
-            ExpireMobileSMSDateTime = DateTime.Now,
-            IsActive = true,
-            Password = PasswordHelper.EncodePasswordMd5(request.Password),
-            MobileActivationCode = new Random().Next(10000, 999999).ToString(),
-        };
+        Domain.Entities.UsersAgg.User user = new Domain.Entities.UsersAgg.User(
+            username: request.Mobile.Trim().ToLower().SanitizeText(),
+            mobile : request.Mobile.Trim().ToLower().SanitizeText(),
+            expireMobileSMSDateTime : DateTime.Now,
+            isActive : true,
+            password : PasswordHelper.EncodePasswordMd5(request.Password),
+            mobileActivationCode : new Random().Next(10000, 999999).ToString()
+            );
 
         await _userCommandRepository.AddAsync(user, cancellationToken);
         await _unitOfWork.SaveChangesAsync();

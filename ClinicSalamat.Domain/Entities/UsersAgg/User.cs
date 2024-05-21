@@ -27,4 +27,19 @@ public class User : BaseEntities<ulong>
     public DateTime? ExpireMobileSMSDateTime { get; set; }
 
     #endregion
+
+    protected User()
+    {
+            
+    }
+
+    public User(string username , string mobile , DateTime expireMobileSMSDateTime , bool isActive , string password , string mobileActivationCode)
+    {
+        Username = username;
+        Mobile = mobile;
+        ExpireMobileSMSDateTime = expireMobileSMSDateTime;
+        IsActive = isActive;
+        Password = password;
+        MobileActivationCode = mobileActivationCode;
+    }
 }

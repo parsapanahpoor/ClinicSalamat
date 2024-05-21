@@ -1,7 +1,6 @@
 ﻿using ClinicSalamat.Application.Contract.DTOs.AdminSide.User;
 using ClinicSalamat.Application.Contract.IApplicationServices.User;
 using ClinicSalamat.Domain.IRepositories.User;
-using Microsoft.EntityFrameworkCore;
 
 namespace ClinicSalamat.Application.CQRS.WebMVC.AdminSide.User.Query;
 

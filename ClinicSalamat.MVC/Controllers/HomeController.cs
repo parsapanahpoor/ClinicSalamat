@@ -10,4 +10,7 @@ public class HomeController : Controller
     public IActionResult Index() => View();
 
     #endregion
+    
+    public IActionResult About() => View();
+
 }

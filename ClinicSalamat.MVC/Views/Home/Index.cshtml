@@ -1,107 +1,858 @@
 ﻿@{
-    ViewData["Title"] = "کلینیک سلامت ";
-    Layout = null;
+    ViewData["Title"] = "خانه ";
 }
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>کلینیک سلامت</title>
+<!-- Banner Section -->
+<section class="banner-section">
+	<div class="main-slider-carousel owl-carousel owl-theme">
 
+		<div class="slide" style="background-image: url(/SitePanel/images/main-slider/image-1.jpg)">
+			<div class="patern-layer-one" style="background-image: url(/SitePanel/images/main-slider/pattern-1.png)"></div>
+			<div class="patern-layer-two" style="background-image: url(/SitePanel/images/main-slider/pattern-2.png)"></div>
+			<div class="auto-container">
 
-    <!-- Bootstrap -->
-    <link href="~/content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <!-- tobii css -->
-    <link href="~/content/css/tobii.min.css" rel="stylesheet" type="text/css" />
-    <!-- Icons -->
-    <link href="~/content/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="unicons.iconscout.com/release/v3.0.6/css/line.css">
-    <!-- Slider -->
-    <link rel="stylesheet" href="~/content/css/tiny-slider.css" />
-    <!-- Main Css -->
-    <link href="~/content/css/style.min.css" rel="stylesheet" type="text/css" id="theme-opt" />
-    <link href="~/content/css/colors/default.css" rel="stylesheet" id="color-opt">
-</head>
-<body>
+				<!-- Content Column -->
+				<div class="content-column">
+					<div class="inner-column">
+						<div class="patern-layer-three" style="background-image: url(/SitePanel/images/main-slider/pattern-3.png)"></div>
+						<div class="title">مشاور تجارت اطلاعاتی </div>
+						<h1>آژانس ما ارائه می دهد <br> بهترین کیفیت خدمات برای مشتریان</h1>
+						<div class="text">ما 100+ مهندس نرم افزار حرفه ای با بیش از <br> 10 سال تجربه در ارائه محصولات برتر.</div>
+						<div class="btns-box">
+							<a href="about.html" class="theme-btn btn-style-one"><span class="txt">مطالعه بیشتر</span></a>
+						</div>
+					</div>
+				</div>
 
+			</div>
+		</div>
 
-    <!-- Navbar STart -->
-    <header id="topnav" class="defaultscroll sticky " style="background-color:white !important">
-        <div class="container">
-           
-            <div class="buy-button">
-                <a class="btn btn-primary  " asp-action="Index" asp-area="Admin" asp-controller="Home">پنل ادمین </a>
-            </div><!--end login button-->
-            <!-- End Logo container-->
-            <div class="menu-extras ">
-                <div class="menu-item text-center justify-content-center">
-                    <!-- Mobile menu toggle-->
-                    <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
-                        <div class="lines">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </a>
-                    <!-- End mobile menu toggle-->
-                </div>
-            </div>
+		<div class="slide" style="background-image: url(/SitePanel/images/main-slider/image-1.jpg)">
+			<div class="patern-layer-one" style="background-image: url(/SitePanel/images/main-slider/pattern-1.png)"></div>
+			<div class="patern-layer-two" style="background-image: url(/SitePanel/images/main-slider/pattern-2.png)"></div>
+			<div class="auto-container">
 
-            <div id="navigation">
+				<!-- Content Column -->
+				<div class="content-column">
+					<div class="inner-column">
+						<div class="patern-layer-three" style="background-image: url(/SitePanel/images/main-slider/pattern-3.png)"></div>
+						<div class="title">مشاور تجارت اطلاعاتی </div>
+						<h1>آژانس ما ارائه می دهد <br> بهترین کیفیت خدمات برای مشتریان</h1>
+						<div class="text">ما 100+ مهندس نرم افزار حرفه ای با بیش از <br> 10 سال تجربه در ارائه محصولات برتر.</div>
+						<div class="btns-box">
+							<a href="about.html" class="theme-btn btn-style-one"><span class="txt">مطالعه بیشتر</span></a>
+						</div>
+					</div>
+				</div>
 
-                <ul class="navigation-menu nav-light">
-                    @*  <li><a href="/Home" class="sub-menu-item">صفحه اصلی </a></li>   *@
-                </ul>
+			</div>
+		</div>
 
-            </div>
-        </div>
-    </header>
+		<div class="slide" style="background-image: url(/SitePanel/images/main-slider/image-1.jpg)">
+			<div class="patern-layer-one" style="background-image: url(/SitePanel/images/main-slider/pattern-1.png)"></div>
+			<div class="patern-layer-two" style="background-image: url(/SitePanel/images/main-slider/pattern-2.png)"></div>
+			<div class="auto-container">
 
-    <div class="position-relative">
-        <div class="shape overflow-hidden text-white">
-            <svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M720 125L2160 0H2880V250H0V125H720Z" fill="currentColor"></path>
-            </svg>
-        </div>
-    </div>
+				<!-- Content Column -->
+				<div class="content-column">
+					<div class="inner-column">
+						<div class="patern-layer-three" style="background-image: url(/SitePanel/images/main-slider/pattern-3.png)"></div>
+						<div class="title">مشاور تجارت اطلاعاتی </div>
+						<h1>آژانس ما ارائه می دهد <br> بهترین کیفیت خدمات برای مشتریان</h1>
+						<div class="text">ما 100+ مهندس نرم افزار حرفه ای با بیش از <br> 10 سال تجربه در ارائه محصولات برتر.</div>
+						<div class="btns-box">
+							<a href="about.html" class="theme-btn btn-style-one"><span class="txt">مطالعه بیشتر</span></a>
+						</div>
+					</div>
+				</div>
 
-    <!-- Footer Start -->
-    @* <footer class="footer footer-bar mt-5">
-    <div class="container text-center">
-    <div class="row align-items-center">
-    <div class="col-sm-6">
-    <div class="text-sm-start">
-    <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> کلیه حقوق متعلق است به   <a href="#" target="_blank" class="text-reset">بیمارستان شفا ساری </a></p>
-    </div>
-    </div><!--end col-->
+			</div>
+		</div>
 
+	</div>
 
-    </div><!--end row-->
-    </div><!--end container-->
-    </footer><!--end footer--> *@
-    <!-- Footer End -->
-    @* <!-- Back to top -->
-    <a href="#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><i data-feather="arrow-up" class="icons"></i></a>
-    <!-- Back to top --> *@
-    <!-- javascript -->
-    <script src="~/content/js/bootstrap.bundle.min.js"></script>
-    <!-- SLIDER -->
-    <script src="~/content/js/tiny-slider.js"></script>
-    <!-- tobii js -->
-    <script src="~/content/js/tobii.min.js"></script>
-    <!-- Icons -->
-    <script src="~/content/js/feather.min.js"></script>
-    <!-- Switcher -->
-    <script src="~/content/js/switcher.js"></script>
-    <!-- Main Js -->
-    <script src="~/content/js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
-    <script src="~/content/js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+</section>
+<!-- End Banner Section -->
+<!-- About Section -->
+<section class="about-section">
+	<div class="auto-container">
+		<!-- Sec Title -->
+		<div class="sec-title">
+			<div class="title">درباره شرکت</div>
+			<h2>شما نمی توانید استفاده کنید <br> چون ما انتخاب میکنیم که شما بهترین هستید.</h2>
+		</div>
+		<div class="row clearfix">
 
-</body>
-</html>
+			<!-- Content Column -->
+			<div class="content-column col-lg-6 col-md-12 col-sm-12">
+				<div class="inner-column">
+					<div class="text">آیا هر صنعتی از روند مخاطب و روند فروش بازاریابی پیچیده تری از فناوری B2B برخوردار است؟ تعداد افرادی که بر فروش تأثیر می گذارند ، طول چرخه تصمیم گیری ، منافع رقابتی افرادی که این فناوری را خریداری ، اجرا ، مدیریت و استفاده می کنند ، در نظر بگیرید. در اینجا محتوای بسیار معنی داری است.</div>
+					<div class="blocks-outer">
 
+						<!-- Feature Block -->
+						<div class="feature-block">
+							<div class="inner-box">
+								<div class="icon flaticon-award-1"></div>
+								<h6>تجربه </h6>
+								<div class="feature-text">تیم عالی ما متشکل از بیش از 1400 متخصص نرم افزار است.</div>
+							</div>
+						</div>
 
+						<!-- Feature Block -->
+						<div class="feature-block">
+							<div class="inner-box">
+								<div class="icon flaticon-technical-support"></div>
+								<h6>پشتیبانی سریع </h6>
+								<div class="feature-text">ما به شما کمک می کنیم ضمن به اشتراک گذاشتن ایده های جسورانه ، ایده های جدید پررنگ خود را ارسال کنید.</div>
+							</div>
+						</div>
+
+					</div>
+
+					<a href="#" class="lightbox-image theme-btn btn-style-one"><span class="txt"><i class="play-icon"><img src="/SitePanel/images/icons/play-icon.png" alt="" /></i>&ensp; نمایش ویدئو </span></a>
+
+				</div>
+			</div>
+
+			<!-- Images Column -->
+			<div class="images-column col-lg-6 col-md-12 col-sm-12">
+				<div class="inner-column" style="background-image: url(/SitePanel/images/icons/globe.png)">
+					<div class="pattern-layer" style="background-image: url(/SitePanel/images/background/pattern-1.png)"></div>
+					<div class="images-outer parallax-scene-1">
+						<div class="image" data-depth="0.10">
+							<img src="/SitePanel/images/resource/about-1.jpg" alt="" />
+						</div>
+						<div class="image-two" data-depth="0.30">
+							<img src="/SitePanel/images/resource/about-2.jpg" alt="" />
+						</div>
+						<div class="image-three" data-depth="0.20">
+							<img src="/SitePanel/images/resource/about-3.jpg" alt="" />
+						</div>
+						<div class="image-four" data-depth="0.30">
+							<img src="/SitePanel/images/resource/about-4.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+				<a href="about.html" class="learn"><span class="arrow flaticon-long-arrow-pointing-to-the-right"></span>مطالعه بیشتر درباره شرکت</a>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- End About Section -->
+<!-- Featured Section -->
+<section class="featured-section">
+	<div class="auto-container">
+		<div class="row clearfix">
+
+			<!-- Featured Block Two -->
+			<div class="feature-block-two col-lg-6 col-md-12 col-sm-12">
+				<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="background-image: url(/SitePanel/images/resource/feature-1.jpg)">
+					<div class="number">35 +</div>
+					<h4>جفت کار در سراسر جهان</h4>
+					<div class="text">برای موفقیت ، هر راه حل نرم افزاری باید کاملاً در محیط فناوری موجود ادغام شود..</div>
+				</div>
+			</div>
+
+			<!-- Featured Block Two -->
+			<div class="feature-block-two col-lg-6 col-md-12 col-sm-12">
+				<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms" style="background-image: url(/SitePanel/images/resource/feature-2.jpg)">
+					<div class="number">40 k</div>
+					<h4>مشتریان خوشحال </h4>
+					<div class="text">برای موفقیت ، هر راه حل نرم افزاری باید کاملاً در محیط فناوری موجود ادغام شود..</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- End Featured Section -->
+<!-- Services Section -->
+<section class="services-section margin-top">
+	<div class="pattern-layer" style="background-image: url(/SitePanel/images/background/pattern-2.png)"></div>
+	<div class="auto-container">
+		<!-- Sec Title -->
+		<div class="sec-title light centered">
+			<div class="title">ما کی هستیم</div>
+			<h2>ما با جنبه های <br> اطلاعاتی هستیم</h2>
+		</div>
+		<div class="row clearfix">
+
+			<!-- Service Block -->
+			<div class="service-block col-lg-3 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="icon-box">
+						<span class="icon flaticon-responsive"></span>
+					</div>
+					<h5><a href="services-detail.html">خدمات اطلاعاتی </a></h5>
+					<div class="text">با این حال ، برای اینکه به شما توضیح دهیم چگونه همه این اشتباهات راضی کننده تأیید می کند ایده های شما را تأیید می کند.</div>
+					<a href="services-detail.html" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+				</div>
+			</div>
+
+			<!-- Service Block -->
+			<div class="service-block col-lg-3 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="icon-box">
+						<span class="icon flaticon-monitor"></span>
+					</div>
+					<h5><a href="services-detail.html">امنیت سیستم </a></h5>
+					<div class="text">با این حال ، برای اینکه به شما توضیح دهیم چگونه همه این اشتباهات راضی کننده تأیید می کند ایده های شما را تأیید می کند.</div>
+					<a href="services-detail.html" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+				</div>
+			</div>
+
+			<!-- Service Block -->
+			<div class="service-block col-lg-3 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="icon-box">
+						<span class="icon flaticon-coding"></span>
+					</div>
+					<h5><a href="services-detail.html">توسعه وب</a></h5>
+					<div class="text">با این حال ، برای اینکه به شما توضیح دهیم چگونه همه این اشتباهات راضی کننده تأیید می کند ایده های شما را تأیید می کند.</div>
+					<a href="services-detail.html" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+				</div>
+			</div>
+
+			<!-- Service Block -->
+			<div class="service-block col-lg-3 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="icon-box">
+						<span class="icon flaticon-laptop"></span>
+					</div>
+					<h5><a href="services-detail.html">امنیت دیتابیس</a></h5>
+					<div class="text">با این حال ، برای اینکه به شما توضیح دهیم چگونه همه این اشتباهات راضی کننده تأیید می کند ایده های شما را تأیید می کند.</div>
+					<a href="services-detail.html" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- End Services Section -->
+<!-- Services Section Two -->
+<section class="services-section-two margin-top">
+	<div class="auto-container">
+		<div class="upper-box">
+			<div class="icon-one" style="background-image: url(/SitePanel/images/icons/icon-1.png)"></div>
+			<div class="icon-two" style="background-image: url(/SitePanel/images/icons/icon-2.png)"></div>
+			<div class="icon-three" style="background-image: url(/SitePanel/images/icons/icon-3.png)"></div>
+			<!-- Sec Title -->
+			<div class="sec-title light centered">
+				<div class="title">ما کی هستیم</div>
+				<h2>ما با جنبه های <br> اطلاعاتی هستیم</h2>
+			</div>
+		</div>
+		<div class="inner-container">
+			<div class="row clearfix">
+
+				<!-- Service Block Two -->
+				<div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="shape-one"></div>
+						<div class="shape-two"></div>
+						<div class="icon-box">
+							<span class="icon flaticon-coding-1"></span>
+						</div>
+						<h5><a href="services-detail.html">توسعه وب</a></h5>
+						<div class="text">ما چیزی فراتر از مهارت های خوب کد نویسی داریم. تجربه ما باعث می شود از دیگران جدا شویم توسعه وب.</div>
+					</div>
+				</div>
+
+				<!-- Service Block Two -->
+				<div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="shape-one"></div>
+						<div class="shape-two"></div>
+						<div class="icon-box">
+							<span class="icon flaticon-mobile-app"></span>
+						</div>
+						<h5><a href="services-detail.html">توسعه موبایل </a></h5>
+						<div class="text">ایجاد نرم افزار پیچیده سازمانی ، اطمینان از یکپارچه سازی نرم افزار قابل اعتماد ، سیستم میراث خود را مدرن کنید.</div>
+					</div>
+				</div>
+
+				<!-- Service Block Two -->
+				<div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="shape-one"></div>
+						<div class="shape-two"></div>
+						<div class="icon-box">
+							<span class="icon flaticon-computer"></span>
+						</div>
+						<h5><a href="services-detail.html">UI/UX طراحی </a></h5>
+						<div class="text">محصول مورد نیاز خود را به موقع با تیمی مجرب که از روند طراحی واضح و موثر استفاده می کند ، بسازید.</div>
+					</div>
+				</div>
+
+				<!-- Service Block Two -->
+				<div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="shape-one"></div>
+						<div class="shape-two"></div>
+						<div class="icon-box">
+							<span class="icon flaticon-web"></span>
+						</div>
+						<h5><a href="services-detail.html">آی کی و تست</a></h5>
+						<div class="text">برای انجام آزمایش و ممیزی جامع ، چند مرحله ای از نرم افزار خود ، به متخصصان ما مراجعه کنید.</div>
+					</div>
+				</div>
+
+				<!-- Service Block Two -->
+				<div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="shape-one"></div>
+						<div class="shape-two"></div>
+						<div class="icon-box">
+							<span class="icon flaticon-monitor-2"></span>
+						</div>
+						<h5><a href="services-detail.html">مشاوره اطلاعاتی </a></h5>
+						<div class="text">برای انجام آزمایش و ممیزی جامع ، چند مرحله ای از نرم افزار خود ، به متخصصان ما مراجعه کنید.</div>
+					</div>
+				</div>
+
+				<!-- Service Block Two -->
+				<div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="shape-one"></div>
+						<div class="shape-two"></div>
+						<div class="icon-box">
+							<span class="icon flaticon-human-resources"></span>
+						</div>
+						<h5><a href="services-detail.html">تیم اختصاصی</a></h5>
+						<div class="text">طی یک دهه گذشته ، مشتریان ما با استفاده از روند ایجاد انگیزه ، استفاده می کنند.</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Services Section Two -->
+<!-- Call To Action Section -->
+<section class="call-to-action-section" style="background-image: url(/SitePanel/images/background/pattern-3.png)">
+	<div class="auto-container">
+		<div class="row clearfix">
+			<!-- Heading Column -->
+			<div class="heading-column col-lg-8 col-md-12 col-sm-12">
+				<div class="inner-column">
+					<h2>آماده شدن برای کسب و کار شما <br> موفقیت با راه حل فناوری اطلاعات</h2>
+				</div>
+			</div>
+			<!-- Button Column -->
+			<div class="button-column col-lg-4 col-md-12 col-sm-12">
+				<div class="inner-column">
+					<a href="contact.html" class="theme-btn btn-style-two"><span class="txt">ملاقات با ما</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Call To Action Section -->
+<!-- Cases Section -->
+<section class="cases-section">
+	<div class="auto-container">
+		<!-- Sec Title -->
+		<div class="sec-title centered">
+			<div class="title">آخرین مورد موردی</div>
+			<h2>اکنون مطالب اخیر ما را می خواند <br> مطالعات پروژه ها</h2>
+		</div>
+		<div class="row clearfix">
+
+			<!-- Case Block -->
+			<div class="case-block col-lg-4 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="image">
+						<img src="/SitePanel/images/gallery/1.jpg" alt="" />
+						<div class="overlay-box">
+							<a href="images/gallery/1.jpg" data-fancybox="case" data-caption="" class="search-icon"><span class="icon flaticon-search"></span></a>
+							<div class="content">
+								<h4><a href="projects-detail.html">برنامه رسانه های اجتماعی</a></h4>
+								<div class="category">ایده ها / فناوری</div>
+							</div>
+							<a href="projects-detail.html" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Case Block -->
+			<div class="case-block col-lg-4 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="image">
+						<img src="/SitePanel/images/gallery/2.jpg" alt="" />
+						<div class="overlay-box">
+							<a href="images/gallery/2.jpg" data-fancybox="case" data-caption="" class="search-icon"><span class="icon flaticon-search"></span></a>
+							<div class="content">
+								<h4><a href="projects-detail.html">برنامه رسانه های اجتماعی</a></h4>
+								<div class="category">ایده ها / فناوری</div>
+							</div>
+							<a href="projects-detail.html" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Case Block -->
+			<div class="case-block col-lg-4 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="image">
+						<img src="/SitePanel/images/gallery/3.jpg" alt="" />
+						<div class="overlay-box">
+							<a href="images/gallery/3.jpg" data-fancybox="case" data-caption="" class="search-icon"><span class="icon flaticon-search"></span></a>
+							<div class="content">
+								<h4><a href="projects-detail.html">برنامه رسانه های اجتماعی</a></h4>
+								<div class="category">ایده ها / فناوری</div>
+							</div>
+							<a href="projects-detail.html" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Case Block -->
+			<div class="case-block col-lg-6 col-md-12 col-sm-12">
+				<div class="inner-box">
+					<div class="image">
+						<img src="/SitePanel/images/gallery/4.jpg" alt="" />
+						<div class="overlay-box">
+							<a href="images/gallery/4.jpg" data-fancybox="case" data-caption="" class="search-icon"><span class="icon flaticon-search"></span></a>
+							<div class="content">
+								<h4><a href="projects-detail.html">برنامه رسانه های اجتماعی</a></h4>
+								<div class="category">ایده ها / فناوری</div>
+							</div>
+							<a href="projects-detail.html" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Case Block -->
+			<div class="case-block col-lg-6 col-md-12 col-sm-12">
+				<div class="inner-box">
+					<div class="image">
+						<img src="/SitePanel/images/gallery/5.jpg" alt="" />
+						<div class="overlay-box">
+							<a href="images/gallery/5.jpg" data-fancybox="case" data-caption="" class="search-icon"><span class="icon flaticon-search"></span></a>
+							<div class="content">
+								<h4><a href="projects-detail.html">برنامه رسانه های اجتماعی</a></h4>
+								<div class="category">ایده ها / فناوری</div>
+							</div>
+							<a href="projects-detail.html" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="section-text">ما در 3 سال گذشته بیش از 1 هزار  پروژه انجام داده ایم ، با 100٪ رضایت.</div>
+
+		<div class="btn-box text-center">
+			<a href="#" class="theme-btn btn-style-three"><span class="txt">نمایش همه</span></a>
+		</div>
+
+	</div>
+</section>
+<!-- End Cases Section -->
+<!--Sponsors Section-->
+<section class="sponsors-section">
+	<div class="auto-container">
+
+		<div class="carousel-outer">
+			<!--Sponsors Slider-->
+			<ul class="sponsors-carousel owl-carousel owl-theme">
+				<li><div class="image-box"><a href="#"><img src="/SitePanel/images/clients/1.png" alt=""></a></div></li>
+				<li><div class="image-box"><a href="#"><img src="/SitePanel/images/clients/2.png" alt=""></a></div></li>
+				<li><div class="image-box"><a href="#"><img src="/SitePanel/images/clients/3.png" alt=""></a></div></li>
+				<li><div class="image-box"><a href="#"><img src="/SitePanel/images/clients/4.png" alt=""></a></div></li>
+				<li><div class="image-box"><a href="#"><img src="/SitePanel/images/clients/1.png" alt=""></a></div></li>
+				<li><div class="image-box"><a href="#"><img src="/SitePanel/images/clients/2.png" alt=""></a></div></li>
+				<li><div class="image-box"><a href="#"><img src="/SitePanel/images/clients/3.png" alt=""></a></div></li>
+				<li><div class="image-box"><a href="#"><img src="/SitePanel/images/clients/4.png" alt=""></a></div></li>
+			</ul>
+		</div>
+
+	</div>
+</section>
+<!--End Sponsors Section-->
+<!-- Testimonial Section -->
+<section class="testimonial-section">
+	<div class="auto-container">
+		<!-- Sec Title -->
+		<div class="sec-title">
+			<div class="clearfix">
+				<div class="pull-left">
+					<div class="title">آخرین مورد موردی</div>
+					<h2>اکنون مطالب اخیر ما را می خواند <br> مطالعات پروژه ها</h2>
+				</div>
+				<div class="pull-right">
+					<div class="text">هدف ما کمک به شرکتهای ما در حفظ یا دستیابی به بهترین کلاس است <br> موقعیت در صنایع مربوطه و تیم ما کار می کند.</div>
+				</div>
+			</div>
+		</div>
+		<div class="testimonial-carousel owl-carousel owl-theme">
+
+			<!-- Testimonial Block -->
+			<div class="testimonial-block">
+				<div class="inner-box" style="background-image: url(/SitePanel/images/background/pattern-4.png)">
+					<div class="upper-box">
+						<div class="icon">
+							<img src="/SitePanel/images/resource/testimonial-icon-1.png" alt="" />
+						</div>
+						<h4>استیلارت </h4>
+						<div class="designation">مشتری شرکت</div>
+					</div>
+					<div class="text">"بسیار خوش فکر و بیان ارتباطات. نقاط عطف ، مهلت و کار سریع را پاک کنید. صبر. صبر بی نهایت. بدون میانبر حتی اگر مشتری بی خیال باشد. بهترین قسمت ... همیشه حل مشکلات با ایده های عالی و عالی!."</div>
+				</div>
+			</div>
+
+			<!-- Testimonial Block -->
+			<div class="testimonial-block">
+				<div class="inner-box" style="background-image: url(/SitePanel/images/background/pattern-4.png)">
+					<div class="upper-box">
+						<div class="icon">
+							<img src="/SitePanel/images/resource/testimonial-icon-2.png" alt="" />
+						</div>
+						<h4>مهارت اسکیما  </h4>
+						<div class="designation">مشتری شرکت</div>
+					</div>
+					<div class="text">"بسیار خوش فکر و بیان ارتباطات. نقاط عطف ، مهلت و کار سریع را پاک کنید. صبر. صبر بی نهایت. بدون میانبر حتی اگر مشتری بی خیال باشد. بهترین قسمت ... همیشه حل مشکلات با ایده های عالی و عالی!."</div>
+				</div>
+			</div>
+
+			<!-- Testimonial Block -->
+			<div class="testimonial-block">
+				<div class="inner-box" style="background-image: url(/SitePanel/images/background/pattern-4.png)">
+					<div class="upper-box">
+						<div class="icon">
+							<img src="/SitePanel/images/resource/testimonial-icon-1.png" alt="" />
+						</div>
+						<h4>استیلارت </h4>
+						<div class="designation">مشتری شرکت</div>
+					</div>
+					<div class="text">"بسیار خوش فکر و بیان ارتباطات. نقاط عطف ، مهلت و کار سریع را پاک کنید. صبر. صبر بی نهایت. بدون میانبر حتی اگر مشتری بی خیال باشد. بهترین قسمت ... همیشه حل مشکلات با ایده های عالی و عالی!."</div>
+				</div>
+			</div>
+
+			<!-- Testimonial Block -->
+			<div class="testimonial-block">
+				<div class="inner-box" style="background-image: url(/SitePanel/images/background/pattern-4.png)">
+					<div class="upper-box">
+						<div class="icon">
+							<img src="/SitePanel/images/resource/testimonial-icon-2.png" alt="" />
+						</div>
+						<h4>مهارت اسکیما  </h4>
+						<div class="designation">مشتری شرکت</div>
+					</div>
+					<div class="text">"بسیار خوش فکر و بیان ارتباطات. نقاط عطف ، مهلت و کار سریع را پاک کنید. صبر. صبر بی نهایت. بدون میانبر حتی اگر مشتری بی خیال باشد. بهترین قسمت ... همیشه حل مشکلات با ایده های عالی و عالی!."</div>
+				</div>
+			</div>
+
+			<!-- Testimonial Block -->
+			<div class="testimonial-block">
+				<div class="inner-box" style="background-image: url(/SitePanel/images/background/pattern-4.png)">
+					<div class="upper-box">
+						<div class="icon">
+							<img src="/SitePanel/images/resource/testimonial-icon-1.png" alt="" />
+						</div>
+						<h4>استیلارت </h4>
+						<div class="designation">مشتری شرکت</div>
+					</div>
+					<div class="text">"بسیار خوش فکر و بیان ارتباطات. نقاط عطف ، مهلت و کار سریع را پاک کنید. صبر. صبر بی نهایت. بدون میانبر حتی اگر مشتری بی خیال باشد. بهترین قسمت ... همیشه حل مشکلات با ایده های عالی و عالی!."</div>
+				</div>
+			</div>
+
+			<!-- Testimonial Block -->
+			<div class="testimonial-block">
+				<div class="inner-box" style="background-image: url(/SitePanel/images/background/pattern-4.png)">
+					<div class="upper-box">
+						<div class="icon">
+							<img src="/SitePanel/images/resource/testimonial-icon-2.png" alt="" />
+						</div>
+						<h4>مهارت اسکیما  </h4>
+						<div class="designation">مشتری شرکت</div>
+					</div>
+					<div class="text">"بسیار خوش فکر و بیان ارتباطات. نقاط عطف ، مهلت و کار سریع را پاک کنید. صبر. صبر بی نهایت. بدون میانبر حتی اگر مشتری بی خیال باشد. بهترین قسمت ... همیشه حل مشکلات با ایده های عالی و عالی!."</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="lower-text">بیش از 5 هزار مشتری نظرات خود را با ما در میان می گذارند. . . <a href="testimonial.html">نمایش همه نظرات </a></div>
+
+	</div>
+</section>
+<!-- End Testimonial Section -->
+<!-- Technology Section -->
+<section class="technology-section" style="background-image: url(/SitePanel/images/background/1.jpg)">
+	<div class="pattern-layer-one" style="background-image: url(/SitePanel/images/background/pattern-5.png)"></div>
+	<div class="pattern-layer-two" style="background-image: url(/SitePanel/images/background/pattern-6.png)"></div>
+	<div class="auto-container">
+		<div class="row clearfix">
+			<!-- Title Column -->
+			<div class="title-column col-lg-5 col-md-12 col-sm-12">
+				<div class="inner-column">
+					<!-- Sec Title -->
+					<div class="sec-title light">
+						<div class="title">تکنولوژی جدید</div>
+						<h2>ما راه حل هایی را با هدف کارگاه های آموزشی اعتماد ارائه می دهیم</h2>
+					</div>
+				</div>
+			</div>
+			<!-- Blocks Column -->
+			<div class="blocks-column col-lg-7 col-md-12 col-sm-12">
+				<div class="inner-column">
+					<div class="row clearfix">
+
+						<!-- Technology Block -->
+						<div class="technology-block col-lg-4 col-md-6 col-sm-12">
+							<div class="inner-box">
+								<a href="services-detail.html" class="overlay-link"></a>
+								<div class="icon-box">
+									<span class="flaticon-coding-2"></span>
+								</div>
+								<h6>وب </h6>
+							</div>
+						</div>
+
+						<!-- Technology Block -->
+						<div class="technology-block col-lg-4 col-md-6 col-sm-12">
+							<div class="inner-box">
+								<a href="services-detail.html" class="overlay-link"></a>
+								<div class="icon-box">
+									<span class="flaticon-android"></span>
+								</div>
+								<h6>آندروید </h6>
+							</div>
+						</div>
+
+						<!-- Technology Block -->
+						<div class="technology-block col-lg-4 col-md-6 col-sm-12">
+							<div class="inner-box">
+								<a href="services-detail.html" class="overlay-link"></a>
+								<div class="icon-box">
+									<span class="flaticon-apple"></span>
+								</div>
+								<h6>آی او اس </h6>
+							</div>
+						</div>
+
+						<!-- Technology Block -->
+						<div class="technology-block col-lg-4 col-md-6 col-sm-12">
+							<div class="inner-box">
+								<a href="services-detail.html" class="overlay-link"></a>
+								<div class="icon-box">
+									<span class="flaticon-iot"></span>
+								</div>
+								<h6>IOT</h6>
+							</div>
+						</div>
+
+						<!-- Technology Block -->
+						<div class="technology-block col-lg-4 col-md-6 col-sm-12">
+							<div class="inner-box">
+								<a href="services-detail.html" class="overlay-link"></a>
+								<div class="icon-box">
+									<span class="flaticon-smartband"></span>
+								</div>
+								<h6>پوشیدنی </h6>
+							</div>
+						</div>
+
+						<!-- Technology Block -->
+						<div class="technology-block col-lg-4 col-md-6 col-sm-12">
+							<div class="inner-box">
+								<a href="services-detail.html" class="overlay-link"></a>
+								<div class="icon-box">
+									<span class="flaticon-tv"></span>
+								</div>
+								<h6>تلویزیون </h6>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Technology Section -->
+<!-- Team Section -->
+<section class="team-section" style="background-image: url(/SitePanel/images/background/2.jpg)">
+	<div class="auto-container">
+		<!-- Sec Title -->
+		<div class="sec-title">
+			<div class="clearfix">
+				<div class="pull-left">
+					<div class="title">تیم اختصاصی ما</div>
+					<h2>ما هستیم <br> در یک تیم موفق</h2>
+				</div>
+				<div class="pull-right">
+					<div class="text">هدف ما کمک به شرکتهای ما در حفظ یا دستیابی به بهترین کلاس است <br> موقعیت در صنایع مربوطه و تیم ما کار می کند.</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix">
+
+			<!-- Team Block -->
+			<div class="team-block col-lg-3 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="image">
+						<a href="team.html"><img src="/SitePanel/images/resource/team-1.jpg" alt="" /></a>
+					</div>
+					<div class="lower-box">
+						<!-- Social Box -->
+						<ul class="social-box">
+							<li><a href="#" class="fa fa-facebook-f"></a></li>
+							<li><a href="#" class="fa fa-twitter"></a></li>
+							<li><a href="#" class="fa fa-dribbble"></a></li>
+						</ul>
+						<div class="content">
+							<h5><a href="team.html">جنیفر گارسیا</a></h5>
+							<div class="designation">مشاوره شرکت</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Team Block -->
+			<div class="team-block col-lg-3 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="image">
+						<a href="team.html"><img src="/SitePanel/images/resource/team-2.jpg" alt="" /></a>
+					</div>
+					<div class="lower-box">
+						<!-- Social Box -->
+						<ul class="social-box">
+							<li><a href="#" class="fa fa-facebook-f"></a></li>
+							<li><a href="#" class="fa fa-twitter"></a></li>
+							<li><a href="#" class="fa fa-dribbble"></a></li>
+						</ul>
+						<div class="content">
+							<h5><a href="team.html">فلیپ لام</a></h5>
+							<div class="designation">طراحی وب</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Team Block -->
+			<div class="team-block col-lg-3 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="image">
+						<a href="team.html"><img src="/SitePanel/images/resource/team-3.jpg" alt="" /></a>
+					</div>
+					<div class="lower-box">
+						<!-- Social Box -->
+						<ul class="social-box">
+							<li><a href="#" class="fa fa-facebook-f"></a></li>
+							<li><a href="#" class="fa fa-twitter"></a></li>
+							<li><a href="#" class="fa fa-dribbble"></a></li>
+						</ul>
+						<div class="content">
+							<h5><a href="team.html">جسیکا مورنو</a></h5>
+							<div class="designation">مدیر پروژه</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Team Block -->
+			<div class="team-block col-lg-3 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="image">
+						<a href="team.html"><img src="/SitePanel/images/resource/team-4.jpg" alt="" /></a>
+					</div>
+					<div class="lower-box">
+						<!-- Social Box -->
+						<ul class="social-box">
+							<li><a href="#" class="fa fa-facebook-f"></a></li>
+							<li><a href="#" class="fa fa-twitter"></a></li>
+							<li><a href="#" class="fa fa-dribbble"></a></li>
+						</ul>
+						<div class="content">
+							<h5><a href="team.html">آدام مارلا</a></h5>
+							<div class="designation">دفتر خدمات اطلاعاتی </div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- End Team Section -->
+<!-- News Section -->
+<section class="news-section">
+	<div class="auto-container">
+		<!-- Sec Title -->
+		<div class="sec-title centered">
+			<div class="title">وبلاگ ما</div>
+			<h2>بررسی  <br> اخبار سایت </h2>
+		</div>
+		<div class="row clearfix">
+
+			<!-- News Block -->
+			<div class="news-block col-lg-4 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="image">
+						<a href="news-detail.html"><img src="/SitePanel/images/resource/news-1.jpg" alt="" /></a>
+					</div>
+					<div class="lower-content">
+						<div class="post-date">22 <span>خرداد </span></div>
+						<ul class="post-meta">
+							<li><span class="icon flaticon-comment"></span>تعداد 3 نظر </li>
+							<li><span class="icon flaticon-user"></span>ادمین </li>
+						</ul>
+						<h4><a href="news-detail.html">بهترین فناوری راه حل فناوری اطلاعات جهان را تعریف کنید</a></h4>
+						<div class="text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است  ...</div>
+						<a class="read-more" href="news-detail.html">ادامه مطلب <span class="arrow flaticon-long-arrow-pointing-to-the-right"></span></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- News Block -->
+			<div class="news-block col-lg-4 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="image">
+						<a href="news-detail.html"><img src="/SitePanel/images/resource/news-2.jpg" alt="" /></a>
+					</div>
+					<div class="lower-content">
+						<div class="post-date">15 <span>خرداد </span></div>
+						<ul class="post-meta">
+							<li><span class="icon flaticon-comment"></span>تعداد 3 نظر </li>
+							<li><span class="icon flaticon-user"></span>ادمین </li>
+						</ul>
+						<h4><a href="news-detail.html">شما باید 20 راز تغییر شکل دیجیتال را امتحان کنید</a></h4>
+						<div class="text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است  ...</div>
+						<a class="read-more" href="news-detail.html">ادامه مطلب <span class="arrow flaticon-long-arrow-pointing-to-the-right"></span></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- News Block -->
+			<div class="news-block col-lg-4 col-md-6 col-sm-12">
+				<div class="inner-box">
+					<div class="image">
+						<a href="news-detail.html"><img src="/SitePanel/images/resource/news-3.jpg" alt="" /></a>
+					</div>
+					<div class="lower-content">
+						<div class="post-date">10 <span>خرداد </span></div>
+						<ul class="post-meta">
+							<li><span class="icon flaticon-comment"></span>تعداد 3 نظر </li>
+							<li><span class="icon flaticon-user"></span>ادمین </li>
+						</ul>
+						<h4><a href="news-detail.html">کنفرانس دیجیتال رویدادهای فناوری اطلاعات در سال 1400 </a></h4>
+						<div class="text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است  ...</div>
+						<a class="read-more" href="news-detail.html">ادامه مطلب <span class="arrow flaticon-long-arrow-pointing-to-the-right"></span></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- End News Section -->
 
